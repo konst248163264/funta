@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@+id/nav_graph__login_fragment">
+
+    <fragment
+        android:id="@+id/nav_graph__login_fragment"
+        android:name="ru.mail.polis.ui.fragments.LoginFragment"
+        android:label="Login Fragment">
+        <action
+            android:id="@+id/action_login_fragment_to_self_definition_fragment"
+            app:destination="@id/nav_graph__self_definition_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_graph__self_definition_fragment"
+        android:name="ru.mail.polis.ui.fragments.SelfDefinitionFragment"
+        android:label="Self Definition Fragment">
+        <action
+            android:id="@+id/action_self_definition_fragment_to_add_apartment_fragment"
+            app:destination="@id/nav_graph__add_apartment_fragment" />
+        <action
+            android:id="@+id/action_nav_graph__self_definition_fragment_to_advert_creation_fragment"
+            app:destination="@id/nav_graph__advert_creation_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_graph__add_apartment_fragment"
+        android:name="ru.mail.polis.ui.fragments.apartment.AddApartmentFragment"
+        android:label="Add Apartment Fragment">
+        <action
+            android:id="@+id/action_nav_graph__add_apartment_fragment_to_listOfPeopleFragment"
+            app:destination="@id/nav_graph__list_of_people" />
+        <action
+            android:id="@+id/action_nav_graph__add_apartment_fragment_to_full_image_fragment"
+            app:destination="@id/nav_graph__full_image_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_graph__list_of_people"
+        android:name="ru.mail.polis.ui.fragments.ListOfPeopleFragment"
+        android:label="List Of People Fragment">
+        <action
+            android:id="@+id/action_nav_graph__list_of_people_to_personAnnouncementFragment"
+            app:destination="@id/nav_graph__person_announcement_fragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/nav_graph__filling_profile_info"
+        android:name="ru.mail.polis.ui.fragments.FirstCreationFragment"
+        android:label="Filling profile info">
+        <action
+            android:id="@+id/action_nav_graph__filling_profile_info_to_self_definition_fragment"
+            app:destination="@id/nav_graph__self_definition_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_graph__person_announcement_fragment"
+        android:name="ru.mail.polis.ui.fragments.PersonAnnouncementFragment"
+        android:label="PersonAnnouncementFragment">
+        <argument
+            android:name="person"
+            app:argType="ru.mail.polis.list.of.people.PersonView" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_graph__settings_fragment"
+        android:name="ru.mail.polis.ui.fragments.SettingsFragment"
+        android:label="SettingsFragment">
+        <action
+            android:id="@+id/action_nav_graph__settings_fragment_to_edit_apartment_fragment"
+            app:destination="@id/nav_graph__edit_apartment_fragment" />
+        <action
+            android:id="@+id/action_nav_graph__settings_fragment_to_edit_person_advert_fragment"
+            app:destination="@id/nav_graph__advert_editing_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_graph__full_image_fragment"
+        android:name="ru.mail.polis.ui.fragments.FullScreenImageFragment" />
+
+    <fragment
+        android:id="@+id/nav_graph__proposed_apartments_fragment"
+        android:name="ru.mail.polis.ui.fragments.ProposedApartmentsFragment"
+        android:label="ProposedApartmentsFragment" >
+        <action
+            android:id="@+id/action_nav_graph__proposed_apartments_fragment_to_fragmentShowOneApartment"
+            app:destination="@id/fragmentShowOneApartment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_graph__advert_creation_fragment"
+        android:name="ru.mail.polis.ui.fragments.advert.AdvertCreationFragment"
+        android:label="AdvertCreationFragment" />
+
+    <fragment
+        android:id="@+id/nav_graph__advert_editing_fragment"
+        android:name="ru.mail.polis.ui.fragments.advert.AdvertEditingFragment"
+        android:label="AdvertEditingFragment" />
+
+    <fragment
+        android:id="@+id/nav_graph__edit_apartment_fragment"
+        android:name="ru.mail.polis.ui.fragments.apartment.EditApartmentFragment"
+        android:label="EditApartmentFragment" />
+    <fragment
+        android:id="@+id/fragmentShowOneApartment"
+        android:name="ru.mail.polis.ui.fragments.FragmentShowOneApartment"
+        android:label="FragmentShowOneApartment" >
+        <argument
+            android:name="apartment"
+            app:argType="ru.mail.polis.list.of.apartments.ApartmentView" />
+        <argument android:name="propose"
+            app:argType="ru.mail.polis.list.of.propose.ProposeView" />
+    </fragment>
+</navigation>

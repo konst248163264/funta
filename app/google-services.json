@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1053360395506",
+    "project_id": "my-app-637ab",
+    "storage_bucket": "my-app-637ab.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1053360395506:android:345c4ada21ca5fe3eb6c6b",
+        "android_client_info": {
+          "package_name": "ru.mail.polis"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1053360395506-kkpgi4icb80nqjc5nhahoa18kj329fkh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ru.mail.polis",
+            "certificate_hash": "9ba1f64886d594888a430a9b1339e82377baa68b"
+          }
+        },
+        {
+          "client_id": "1053360395506-fmu09k5faqp0j1aq2bnqf1sk06g39bhs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCG5i5ldg8xZyIQV7iu7KVfkMObtZD9VSg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1053360395506-fmu09k5faqp0j1aq2bnqf1sk06g39bhs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
